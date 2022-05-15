@@ -76,7 +76,7 @@ input[type="text"] {
     border-color: #4830F0 ;
     padding: 0;
     
-    height: 36px;
+    height: 56px;
     width: 500px;
 }
 
@@ -118,7 +118,7 @@ input[type~="text"], input[type~="password"], input[type~="select"], textarea
     font-weight: 600;
     font-size: 15px;
     border: 0;
-    height: 35px;
+    height: 55px;
     width: 80px;
     border-left: 0;
     margin: 0;
