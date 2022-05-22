@@ -1,0 +1,562 @@
+
+*,
+*:before,
+*:after {  
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.6;
+    font-size: 12px;
+    color:#ffffff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+    font-weight: 400;
+}
+
+/* ====================== CONTAINER ================================== */
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container__intro {
+    max-width: 465px;
+}
+
+/* ====================== INTRO ======================================== */
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    
+
+    background: url("image/intro1.png") no-repeat center;
+    background-size: cover;
+}
+
+.intro__title {
+    font-size: 35px;
+    text-align: start;
+}
+
+.intro__sub {
+    font-weight: 300;
+    font-size: 13px;
+}
+
+
+/* ======================BUTTON======================================= */
+
+
+.button {
+    padding: 10px;
+    padding-top: 20px;
+    height: 36px;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 50px;
+}
+
+.seemore {
+    display: block;
+    color: #3A7EDE;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+/* ===================== HEADER ==========================================*/
+.header {
+    padding-top: 30px;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* ===================== NAV ==========================================*/
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root{
+    --white: #f9f9f9;
+    --black: #463046;
+    --grey: #85888C;
+}
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Header */
+.header{
+    top: 0;
+    width: 100%;
+}
+
+/* Logo */
+.logo{
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    
+}
+
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+
+}
+
+.menu a:hover{
+    background-color: #fff;
+}
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+    
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before{
+    top: 5px;
+}
+
+.hamb-line::after{
+    top: -5px;
+}
+
+
+.side-menu {
+    display: none;
+}
+
+/* Toggle menu icon */
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+
+
+
+
+
+.nav {
+    font-size: 13px;
+
+}
+
+#nav__buy {
+    padding-top: 5px;
+    width: 75px;
+    height: 30px;
+    top: 32px;
+    
+    text-align: center;
+    vertical-align: middle;
+
+    background: #3A7EDE;
+    border-radius: 5px; 
+}
+
+.nav__hover {
+    padding-top: 5px;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 30px;
+
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+    transition: color 0.2s linear;
+}
+
+.nav__link#nav__buy:hover {
+    color: rgb(170, 170, 172);
+}
+
+.nav__link.nav__hover:hover {
+    color: rgb(121, 40, 158);
+}
+
+
+
+/* ====================== BLOCK ======================================== */
+
+
+.stat {
+    display: flex;
+    padding-top: 72px;
+}
+
+.stat__text{
+    color: #1F1F1F;
+    font-weight:300;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: start;
+    vertical-align: top;
+}
+
+.second {
+    position: absolute;
+    padding-top: 65px;
+    font-size: 17px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.stat__item {
+
+    text-align: center;
+}
+
+.stat__logo {
+    padding-right: 90px;
+}
+
+.image__border{
+    border-right: #3A7EDE;
+
+}
+
+.img__fonts{
+    max-width: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+img {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.fonts__text {
+    color: #1F1F1F;
+}
+
+
+
+/* ========================VIDEO================================== */
+
+.video__block {
+    width: 100%;
+}
+
+iframe {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
+/* =======================MANAGE===================================== */
+
+.manage__logo {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.manage__text {
+    font-size: 30px;
+    color: #4C4F51;
+}
+
+
+.manage__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left__text,
+.right__text {
+    color: #4C4F51;
+    max-width: 180px;
+    font-size: 11px;
+}
+
+.right__text{
+    margin-right: 70px;
+    text-align: start;
+}
+
+.left__text{
+    text-align: end;
+    margin-left: 70px;
+}
+
+h1 {
+    font-size: 17px;
+}
+
+.block1 {
+    margin-bottom: 20px;
+}
+
+
+/* ==============CONTACT=========================================== */
+
+.contact__block {
+    width: 100%;
+    height: 500px;
+    background: url(image/contact.png) no-repeat center;
+    background-size: cover;
+}
+
+.contact {
+    display: flex;
+    padding-top: 20%;
+    flex-direction: column;
+}
+
+.formaContact {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+}
+
+input[type=text] {
+    width: 226px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    background:none;
+    outline:none;
+    padding:0;
+    margin-left: 3px;
+    margin-bottom: 0;
+}
+
+.btn {
+    text-decoration:none; 
+    text-align:center; 
+    padding: 10px 50px;
+    border:solid #3A7EDE; 
+    border-radius: 6px;
+    font-weight:bold; 
+    color:#e5ffff; 
+    background-color:#3A7EDE; 
+    margin-left: 10px;
+}
+
+
+/* ==========================BUY========================== */
+
+.buy__info {
+    padding-top: 70px;
+    color: #4C4F51;
+    text-align: center;
+}
+
+.btn2{
+    text-decoration:none; 
+    text-align:center; 
+    padding: 20px 80px;
+    border:solid #3A7EDE; 
+    border-radius: 6px;
+    font-weight:bold; 
+    color:#e5ffff; 
+    background-color:#3A7EDE; 
+    margin: 10px;
+    margin-bottom: 60px;
+}
+
+
+.btn:active,
+.btn2:active {
+    background-color: #3A7EDE;
+    transform: translate(0em, 0.2em);
+  }
+
+
+.btn:active::before,
+.btn2:active::before {
+    background-color: #3A7EDE;
+    transform: translate3d(0, 2, -0.2em);
+}
+
+
+/* ============================WRAPPERS======================= */
+
+body {
+    position: relative;
+}
+.indicator {
+    position: absolute;
+    top: 0; right: 0; left: 0; bottom: 0;
+    background: linear-gradient(to right top, rgb(212, 0, 255) 50%, transparent 50%) no-repeat;
+    background-size: 100% calc(100% - 100vh);
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: darken;
+}
+.indicator::after {
+    content: '';
+    position: fixed;
+    top: 5px; bottom: 0; right: 0; left: 0;
+    background: #fff;
+    z-index: 1;
+}
+
+
+
+#forBuy {
+    text-decoration:none; 
+    text-align:center;  
+    color:#e5ffff; 
+    background-color:#3A7EDE; 
+    border-radius: ;
+}
+
+
+
+/*=========================== Responsiveness =============================== */
+
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+
+    }
+
+    .menu li{
+        float: left;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--grey);
+        
+    }
+    
+    .hamb{
+        display: none;
+    }
+
+
+    /* block */
+    img {
+        display: none;
+
+    }
+
+
+
+
+
+}
