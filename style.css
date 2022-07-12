@@ -547,10 +547,20 @@ body {
         display: none;
     }
 
-
-    /* block */
-
-
-
-
+}
+    /* adaptive */
+@media (max-width: 768px){
+    .stat{
+        display: flex;
+        flex-direction: column;
+    }
+    .second{
+        position: relative;
+        align-self: center;
+        padding-bottom: 100px;
+    }
+    .manage__block {
+        display: flex;
+        flex-direction: column;
+    }
 }   
